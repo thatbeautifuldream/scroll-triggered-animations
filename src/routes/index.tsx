@@ -1,4 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ScrollTriggered } from "@/components/ScrollTriggered";
+import ScrollVideoScrubber from "@/components/ScrollVideoScrubber";
 
-export const Route = createFileRoute("/")({ component: ScrollTriggered });
+export const Route = createFileRoute("/")({
+	component: () => (
+		<ScrollVideoScrubber videoSrc="/videos/shot-drone-10s-20s.mp4" />
+	),
+});
